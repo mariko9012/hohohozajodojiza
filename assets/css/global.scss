@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/pn-regular.woff2') format('woff2'),
+    url('/fonts/pn-regular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/pn-bold.woff2') format('woff2'),
+    url('/fonts/pn-bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/pn-black.woff2') format('woff2'),
+    url('/fonts/pn-black.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+html:root {
+  // colors
+  --text: #211b04;
+  --primary: #00d8ff;
+  --primaryd1: #00c9ec;
+  --primaryd2: #00bcdd;
+  --primaryd3: #02b0cf;
+  --primaryd4: #007c92;
+  --primaryl1: #3ce2ff;
+  --accent: #ffdb49;
+  --accentl1: #ffe47a;
+  --bg: #fff;
+  --border: #211b04;
+
+  // spacing
+  --p0: 5px;
+  --p1: 10px;
+  --p2: 20px;
+  --p3: 40px;
+  --p4: 80px;
+  --p5: 160px;
+}
+
+html {
+  font-family: 'Proxima Nova', 'Yu Gothic', 'YuGothic',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text);
+  letter-spacing: 0.01em;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: var(--bg);
+  scroll-behavior: smooth;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+html[lang='ja-JP'] {
+  font-weight: 600;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a,
+a:active,
+a:visited {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 15px;
+  margin-top: 0;
+  padding: 0;
+  letter-spacing: 0;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 30px 0;
+  padding: 0;
+  letter-spacing: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+}
+
+h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+  font-size: 1.05rem;
+  // font-weight: 600;
+}
+
+.sub {
+  font-size: 0.85em;
+  opacity: 0.85;
+  line-height: 1.2;
+}
+
+a.button {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  letter-spacing: 5px;
+  font-weight: 800;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  height: 90px;
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div {
+    text-align: center;
+    background: var(--primary);
+    height: 100%;
+    width: 100%;
+    min-width: 180px;
+    padding: 0 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+
+    &.reverse {
+      background: white;
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      letter-spacing: 2.5px;
+      font-size: 1rem;
+      min-width: 100px;
+    }
+
+    &:hover {
+      background: var(--primaryl1);
+      letter-spacing: 5.5px;
+
+      &.reverse {
+        background: white;
+        color: var(--primaryd2);
+      }
+
+      @media (max-width: 768px) {
+        letter-spacing: 2.5px;
+      }
+    }
+  }
+}
+
+.contentcolumn {
+  width: 100%;
+  max-width: 1100px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &.full {
+    max-width: inherit;
+    width: auto;
+    margin: 0;
+  }
+}
+
+.interstitial {
+  height: 90vh;
+  background-size: cover;
+  background-position: center center;
+  // overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -100px;
+  width: 100%;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 50vh;
+    margin-bottom: -50px;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: -10%;
+    top: 90%;
+    left: -50%;
+    right: -50%;
+    background: var(--bg);
+    // mix-blend-mode: multiply;
+    transform: rotate(-4deg);
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

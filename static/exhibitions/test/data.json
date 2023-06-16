@@ -1,0 +1,100 @@
+{
+  "title": "Test Exhibition",
+  "bgm": {
+    "src": "",
+    "volume": 0.25
+  },
+  "panes": [
+    {
+      "image": "2.jpg",
+      "y": 0,
+      "hero": "true",
+      "title": "Test Exhibition",
+      "toY": 0.3,
+      "slideTime": "6000"
+    },
+    {
+      "image": "2.jpg",
+      "y": 0.3,
+      "toY": 1,
+      "toZ": 0.8,
+      "text": "Here's our first image. Beautiful, right? I got it from unsplash, tbh."
+    },
+    {
+      "image": "1.jpg",
+      "title": "Title Test",
+      "x": 0,
+      "z": 0.5,
+      "toX": 1,
+      "toY": 0.5,
+      "toZ": 0.3,
+      "text": "<p>Here's some longer text, that might need more than just a simple mini text box. It should automatically adjust to have a larger size, or maybe even a side panel to accommodate it. Sounds cool, right? <i>We'll just have to wait and see if it works properly.</i></p><p>What's that? You want it to be even longer? Well, why not. Here's a little more text to make this really justify a side panel. Like <i>Reeeeeaaaalllllyyyyy</i> justify it. Sheesh, it's hard to come up with more filler text.</p><p>Here's some longer text, that might need more than just a simple mini text box. It should automatically adjust to have a larger size, or maybe even a side panel to accommodate it. Sounds cool, right? <i>We'll just have to wait and see if it works properly.</i></p><p>What's that? You want it to be even longer? Well, why not. Here's a little more text to make this really justify a side panel. Like <i>Reeeeeaaaalllllyyyyy</i> justify it. Sheesh, it's hard to come up with more filler text.</p><p>Here's some longer text, that might need more than just a simple mini text box. It should automatically adjust to have a larger size, or maybe even a side panel to accommodate it. Sounds cool, right? <i>We'll just have to wait and see if it works properly.</i></p><p>What's that? You want it to be even longer? Well, why not. Here's a little more text to make this really justify a side panel. Like <i>Reeeeeaaaalllllyyyyy</i> justify it. Sheesh, it's hard to come up with more filler text.</p>"
+    },
+    {
+      "image": "1.jpg",
+      "z": 1,
+      "x": 0.5,
+      "y": 1,
+      "title": "Some More Details",
+      "text": "This is a detail shot of the image we just saw.",
+      "position": "left",
+      "audio": { "src": "2.mp3", "title": "From the Photographer:" }
+    },
+    {
+      "video": {
+        "src": "1.mp4",
+        "volume": 0.5,
+        "interactive": false,
+        "loop": true
+      },
+      "title": "A Video",
+      "text": "Yeah, it can do videos, too!.",
+      "position": "right",
+      "audio": { "src": "2.mp3", "title": "Videographer's Voice:" }
+    },
+    {
+      "video": {
+        "src": "1.mp4",
+        "volume": 0.5,
+        "interactive": true,
+        "loop": true,
+        "fillScreen": false
+      },
+      "background": "#0bf"
+    },
+    {
+      "video": {
+        "src": "1.mp4",
+        "volume": 0.5,
+        "interactive": true,
+        "loop": true,
+        "fillScreen": false
+      },
+      "image": "3.jpg",
+      "bgm": {
+        "src": "4.mp3",
+        "volume": 0.2
+      }
+    },
+    {
+      "image": "0.png",
+      "text": "Here's some text on the top right.",
+      "position": "top right",
+      "audio": { "src": "3.mp3", "title": "About this feature" },
+      "bgm": {
+        "src": "4.mp3",
+        "volume": 0.6
+      }
+    },
+    {
+      "image": "0.png",
+      "background": "#eee",
+      "toZ": 0.2,
+      "slideTime": "6000",
+      "bgm": {
+        "src": "4.mp3",
+        "volume": 0.05
+      }
+    }
+  ]
+}
