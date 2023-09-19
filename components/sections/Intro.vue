@@ -1,24 +1,14 @@
 <template>
   <PageSection class="section" id="top">
     <div class="introtext">
-      <template v-if="$i18n.locale === 'ja'">
-        <h1></h1>
+        <h1>ホホホ座浄土寺座</h1>
         <h2 class="ja">
-          Bridge to
-          Kyotoは、「都市」をテーマにした、建築・街づくり・アートなど都市に関わる実践者のための私設ライブラリー&イベントスペースです。
+          ホホホ座浄土寺座は、京都・左京区の浄土寺エリアを中心に、地域福祉と場づくりを行う団体です。
         </h2>
-      </template>
-      <template v-else>
-        <h1>A place for urbanists.</h1>
-        <h2>
-          Bridge To Kyoto is an urban library and event
-          space for cities.
-        </h2>
-      </template>
     </div>
     <img
       class="bgillustration"
-      src="~/assets/img/bg_illustration.svg"
+      src="~/assets/img/20230409-IMG_6355.jpeg"
     />
     <img
       v-if="!isMobile"
@@ -50,19 +40,19 @@ export default {
 
 <style lang="scss" scoped>
 .section {
-  min-height: 115vh;
+  background: white;
   width: 100%;
   overflow-x: hidden;
   position: relative;
 
-  @media (max-width: 768px) {
-    min-height: 650px;
-  }
+  // @media (max-width: 768px) {
+  //   min-height: 650px;
+  // }
 }
 .introtext {
   width: 580px;
   position: absolute;
-  top: 300px;
+  top: 150px;
   left: 5vw;
 
   @media (max-width: 768px) {
@@ -77,9 +67,8 @@ export default {
 }
 
 .bgillustration {
-  width: 85vw;
-  margin-left: 13vw;
-  margin-top: 3vh;
+  width: 100%;
+
 
   @media (max-width: 768px) {
     width: 180vw;

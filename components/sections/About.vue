@@ -1,119 +1,115 @@
 <template>
   <PageSection class="section" id="about">
     <div class="contentcolumn">
-      <template v-if="$i18n.locale === 'ja'"></template>
-
-      <template v-else></template>
       <div class="grid">
         <div class="flex text1">
           <div class="textbox left">
-            <template v-if="$i18n.locale === 'ja'">
-              <h1>About</h1>
-              <p>
-                建築・都市・まちづくりの実践者が、国境をこえて学び合える場は、まだあまりありません。
-                <b>Bridge to Kyoto</b
-                >は、世界中からアーバニストやアーティストを受け入れ、国内の建築・都市・まちづくり関係者や市民と交流し、コラボレーションが生まれるきっかけをつくる場所です。
-              </p>
-            </template>
-
-            <template v-else>
-              <h1>About</h1>
-              <p>
-                <b>"Bridge To Kyoto"</b> is a curatorial
-                platform and cultural space for architecture
-                and urbanism based in Kyoto, Japan. It is a
-                private gallery and library that showcases a
-                collection of publications and items in the
-                fields of architecture and urbanism.
-              </p>
-            </template>
+            <h1>About</h1>
+            <p>
+              一般社団法人ホホホ座浄土寺座は、京都・左京区の浄土寺エリアを中心に、地域福祉と空き家の利活用を基盤としたまちづくり、コミュニティの形成・育成を行う団体です。既に地域にある資源を可視化・流通・活用することで、小さなストレスを解消し、誰もが暮らしやすい地域コミュニティを生み出すことを目標に活動しています。
+            </p>
           </div>
         </div>
 
         <div class="illustration ill1">
-          <img src="/assets/img/about1.jpg" />
+          <img src="/assets/img/newlogo.png" />
         </div>
 
         <div class="flex text2">
           <div class="textbox right">
-            <template v-if="$i18n.locale === 'ja'">
-              <h2>Global Discourse, Local Practice.</h2>
-              <p>
-                地域の活性化を目的としたアーティスト・イン・レジデンスが注目を集める一方で、より地域の課題解決や長期的なコラボレーションを目的としたアーバニスト・イン・レジデンスの可能性が、近年注目を集め始めています。海外の街づくりの事例をそのままコピーアンドペーストすることは出来なくとも、お互いから学ぶことはできるはず。
-                グローバルな目線で、ローカルに活動することで、国境を超えた建築・街づくりプロジェクトが生まれる可能性を追求したいと思っています。海外の街づくりの事例については、
-                <a
-                  href="https://www.travelingcircusofurbanism.com/"
-                  target="_blank"
-                  >こちら</a
-                >もご参照ください。
-              </p>
-            </template>
-
-            <template v-else>
-              <h2>Global Discourse, Local Practice.</h2>
-              <p>
-                We can't just copy and paste the best
-                practices from other parts of the world to
-                our city, but that doesn't mean that we
-                can't learn from each other. We believe that
-                more urbanists coming from different
-                backgrounds &amp; sharing their work helps
-                change the discourse and practice of
-                urbanism across the globe. By inviting
-                urbanists from around the world, we'd like
-                to encourage local-scale international
-                collaboration within a global frame of mind.
-                Check out
-                <a
-                  href="https://www.travelingcircusofurbanism.com/"
-                  target="_blank"
-                  >our sister site</a
-                >
-                for more on global urbanism!
-              </p>
-            </template>
+            <h1>浄土寺という場所</h1>
+            <p>
+              私たちが活動する浄土寺近隣は、銀閣寺や法然院、哲学の道、大文字山などの観光地と静かな住宅街が共存する地域です。カルチャーの発信地である書店「ホホホ座浄土寺店」「ホホホ座浄土寺センター」、アートスペース「浄土複合」、レストラン「monk」、複合スペース「Bridge
+              To」など、個性的な商店、施設が点在し、新しい文化の兆しが感じられる地域でもあります。
+            </p>
           </div>
         </div>
 
         <div class="illustration ill2">
-          <img src="/assets/img/about2.jpg" />
+          <img src="/assets/img/大文字2.png" />
         </div>
 
-        <div class="flex text3">
+        <div class="flex text1">
           <div class="textbox left">
-            <template v-if="$i18n.locale === 'ja'">
-              <h2>Live and Work, Kyoto Style.</h2>
-              <p>
-                Bridge to
-                Kyotoは、建築や街づくりに関わるアーバニストや、都市や公共空間をテーマに活動を行うアーティストが1〜6ヶ月の期間で滞在して活動できるアーバニスト・イン・レジデンスとして機能してきました。2023年3月からは、建築・都市・まちづくり関係の蔵書やアイテムを公開する私設ライブラリーとして、不定期でオープンしています（日程は <a
-                  href="https://www.instagram.com/bridgetokyoto/?hl=en"
-                  target="_blank"
-                  >Instagram</a
-                >を参照ください）
-              </p>
-            </template>
-
-            <template v-else>
-              <h2>Live and Work, Kyoto Style.</h2>
-              <p>
-                Since 2020, Bridge To Kyoto has been serving
-                as a residence for urbanists as well as an
-                event, workshop, and gallery space. It is
-                based in a newly renovated postwar
-                Kyoto-style home with a stream in front,
-                adjacent to the Philosopher's Path. It has
-                hosted many creative-minded people from
-                varied backgrounds from around the world
-                since its opening, as well as a multitude of
-                talks, workshops, performances, and
-                exhibitions.
-              </p>
-            </template>
+            <h2>古材流通・場所の活用</h2>
+            <p>
+              「地産地消できる唯一の建材」として、古材の再利用に取り組んでいます。さまざまな建築プロジェクトに加え、地域の空き家、遊休物件の利活用も行っています。改修や不動産関係の相談は、お気軽に
+              <a
+                href="https://www.instagram.com/bridgetokyoto/?hl=en"
+                target="_blank"
+                >お問合せ</a
+              >ください）
+            </p>
           </div>
         </div>
 
         <div class="illustration ill3">
-          <img src="/assets/img/about3.jpg" />
+          <img src="/assets/img/古材流通不動産2.png" />
+        </div>
+
+        <div class="flex text2">
+          <div class="textbox right">
+            <h2>コミュニティスペースの運用</h2>
+            <p>
+              社寺や集会所など、既存の地域資源とメンバーが運営するお店、施設を活用したイベントを行っています。2023年には、ホホホ座浄土寺センター横の物件を取得。物品を無料で提供する「0えんマーケット」、住民が工具やツール類をシェア出来る「ツールライブラリー」などをオープンする予定です。
+            </p>
+          </div>
+        </div>
+
+        <div class="illustration ill4">
+          <img src="/assets/img/コミュニティースペース1.png" />
+        </div>
+
+        <div class="flex text1">
+          <div class="textbox left">
+            <h2>地域福祉</h2>
+            <p>
+              高齢者、障害者、生活に不安を感じている方。立場や程度の大小にかかわらない「地べた」の相談支援を行っています。医療、福祉のプロが在籍し、しかるべき専門機関につなぐことも可能です。＊当法人で地域福祉ボランティア団体「ホホホ・ザ・わいわい」の活動を引き継いでいます。
+            </p>
+          </div>
+        </div>
+
+        <div class="illustration ill5">
+          <img src="/assets/img/地域福祉2.png" />
+        </div>
+
+        <div class="flex text2">
+          <div class="textbox right">
+            <h2>イベント・ワークショップの実施</h2>
+            <p>
+              有識者や実践者を招いたトークイベントやまち歩き、住民を巻き込んだものづくりのワークショップなど、誰もが参加できる学びの場を企画・運営します。
+            </p>
+          </div>
+        </div>
+
+        <div class="illustration ill6">
+          <img src="/assets/img/イベントワークショップ1.png" />
+        </div>
+
+        <div class="flex text1">
+          <div class="textbox left">
+            <h2>公開型住民会議</h2>
+            <p>
+              浄土寺の住民であるか否かに関わらず、自由に出入りし、意見を交わせる一般公開型の住民会議を月一で開催しています。課題の共有、生活のアップデート、今後の活動などをオープンに議論する会です。議事録はオンライン上で一般公開します。浄土寺に限らない「小さな地域コミュニティ」のあり方を模索します。
+            </p>
+          </div>
+        </div>
+
+        <div class="illustration ill7">
+          <img src="/assets/img/公開住民会議2.png" />
+        </div>
+
+        <div class="flex text2">
+          <div class="textbox right">
+            <h2>食の実験</h2>
+            <p>
+              理想的な地域社会をつくるため、「食」をテーマにした研究と実践を行います。健康はもちろん、流通や環境などのテーマにも取り組み、地域の施設を利用したワークショップ、物販企画などを通じ、地域住民にフィードバックします。
+            </p>
+          </div>
+        </div>
+
+        <div class="illustration ill8">
+          <img src="/assets/img/食3.png" />
         </div>
       </div>
     </div>
@@ -121,13 +117,13 @@
 </template>
 
 <script>
-import PageSection from '~/components/PageSection.vue'
+import PageSection from "~/components/PageSection.vue";
 
 export default {
   components: {
     PageSection,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -140,7 +136,7 @@ export default {
 
 .grid {
   display: grid;
-  grid-gap: 270px 120px;
+  grid-gap: 50px 100px;
   grid-template-columns: 1fr 1fr;
   grid-auto-flow: dense;
 
@@ -192,33 +188,62 @@ h1 {
 }
 
 img {
-  max-width: 130%;
+  max-width: 100%;
 }
 .illustration {
-  width: 150%;
+  width: 100%;
+  display: flex;
   align-items: center;
+  justify-content: center;
 
-  &.ill1 {
-    transform: translateX(30px);
-    max-width: 125%;
-    margin-left: -30%;
+  img {
+    max-width: 100%;
   }
 
+  // &.ill1 {
+  //   // transform: translateX(30px);
+  //   // max-width: 125%;
+  //   // margin-left: -30%;
+  // }
+
   &.ill2 {
-    max-width: 115%;
-    margin-left: -20%;
-    transform: rotate(-7deg);
+    // max-width: 115%;
+    // margin-left: -20%;
+    // transform: rotate(-7deg);
     grid-column: 1;
   }
 
   &.ill3 {
-    margin-left: -50%;
+    // margin-left: -50%;
     grid-column: 2;
   }
 
+  &.ill4 {
+    // margin-right: -50%;
+    grid-column: 1;
+  }
+
+  &.ill5 {
+    // margin-left: -50%;
+    grid-column: 2;
+  }
+
+  &.ill6 {
+    // margin-right: -50%;
+    grid-column: 1;
+  }
+  &.ill7 {
+    // margin-left: -50%;
+    grid-column: 2;
+  }
+  &.ill8 {
+    // margin-right: -20%;
+    grid-column: 1;
+  }
+
   @media (max-width: 768px) {
-    margin-left: -15% !important;
-    margin-right: 0 !important;
+    // margin-left: -15% !important;
+    // margin-right: 0 !important;
     max-width: 100% !important;
   }
 }

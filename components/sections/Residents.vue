@@ -1,216 +1,36 @@
 <template>
-  <PageSection
-    class="section contentcolumn full"
-    id="residents"
-  >
+  <PageSection class="section contentcolumn full" id="residents">
     <div
-      v-lazy:background-image="
-        '/assets/img/2023/3.jpg'
-      "
+      v-lazy:background-image="'/assets/img/2023/jodoji2.jpeg'"
       class="interstitial"
     >
       <div class="overlay"></div>
     </div>
 
     <template v-if="$i18n.locale === 'ja'">
-      <h1>Residents</h1>
+      <h1>MEMBERS</h1>
 
-      <p>
-        ※現在、新たなレジデンスの申し込みは受付しておりません。
-      </p>
-
-      <div class="row">
-        <div
-          v-if="($i18n.locale === 'ja' ? ja : en)
-                .current?.length"
-        >
-          <h3>Current</h3>
-
-          <div class="grid">
-            <div
-              class="resident"
-              v-for="r in ($i18n.locale === 'ja' ? ja : en)
-                .current"
-              :key="r.id + r.name + $i18n.locale"
-            >
-              <div
-                class="img"
-                v-lazy:background-image="
-                  `/assets/img/residents/${r.id}.jpg`
-                "
-                :alt="`Photo of ${r.name}`"
-              ></div>
-              <h2 class="name">{{ r.name }}</h2>
-              <div class="description">
-                {{ r.description }}
-                <span class="website" v-if="r.url">
-                  <a :href="r.url" target="_blank"
-                    >Website</a
-                  >
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h3>Upcoming</h3>
-
-          <div class="grid">
-            <div
-              class="resident"
-              v-for="r in ($i18n.locale === 'ja' ? ja : en)
-                .upcoming"
-              :key="r.id + r.name + $i18n.locale"
-            >
-              <div
-                class="img"
-                v-lazy:background-image="
-                  `/assets/img/residents/${r.id}.jpg`
-                "
-                :alt="`Photo of ${r.name}`"
-              ></div>
-              <h2 class="name">{{ r.name }}</h2>
-              <div class="description">
-                {{ r.description }}
-                <span class="website" v-if="r.url">
-                  <a :href="r.url" target="_blank"
-                    >Website</a
-                  >
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h3>Past</h3>
-
-          <div class="grid">
-            <div
-              class="resident"
-              v-for="r in ($i18n.locale === 'ja' ? ja : en)
-                .past"
-              :key="r.id + r.name + $i18n.locale"
-            >
-              <div
-                class="img"
-                v-lazy:background-image="
-                  `/assets/img/residents/${r.id}.jpg`
-                "
-                :alt="`Photo of ${r.name}`"
-              ></div>
-              <h2 class="name">{{ r.name }}</h2>
-              <div class="description">
-                {{ r.description }}
-                <span class="website" v-if="r.url">
-                  <a :href="r.url" target="_blank"
-                    >Website</a
-                  >
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </template>
-
-    <template v-else>
-      <h1>Residents</h1>
-
-      <p>
-        We're not currently accepting new residents, but
-        these are the people who have stayed or organized
-        events and workshops here!
-      </p>
+      <p>一般社団法人ホホホ座浄土寺座の構成員</p>
+      <br />
 
       <div class="row">
-        <div
-          v-if="($i18n.locale === 'ja' ? ja : en)
-                .current?.length"
-        >
-          <h3>Current</h3>
-
-          <div class="grid">
+        <div class="grid">
+          <div
+            class="resident"
+            v-for="r in upcoming"
+            :key="r.id + r.name + $i18n.locale"
+          >
             <div
-              class="resident"
-              v-for="r in en.current"
-              :key="r.id + r.name + $i18n.locale"
-            >
-              <div
-                class="img"
-                v-lazy:background-image="
-                  `/assets/img/residents/${r.id}.jpg`
-                "
-                :alt="`Photo of ${r.name}`"
-              ></div>
-              <h2 class="name">{{ r.name }}</h2>
-              <div class="description">
-                {{ r.description }}
-                <span class="website" v-if="r.url">
-                  <a :href="r.url" target="_blank"
-                    >Website</a
-                  >
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h3>Upcoming</h3>
-
-          <div class="grid">
-            <div
-              class="resident"
-              v-for="r in en.upcoming"
-              :key="r.id + r.name + $i18n.locale"
-            >
-              <div
-                class="img"
-                v-lazy:background-image="
-                  `/assets/img/residents/${r.id}.jpg`
-                "
-                :alt="`Photo of ${r.name}`"
-              ></div>
-              <h2 class="name">{{ r.name }}</h2>
-              <div class="description">
-                {{ r.description }}
-                <span class="website" v-if="r.url">
-                  <a :href="r.url" target="_blank"
-                    >Website</a
-                  >
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h3>Past</h3>
-
-          <div class="grid">
-            <div
-              class="resident"
-              v-for="r in en.past"
-              :key="r.id + r.name + $i18n.locale"
-            >
-              <div
-                class="img"
-                v-lazy:background-image="
-                  `/assets/img/residents/${r.id}.jpg`
-                "
-                :alt="`Photo of ${r.name}`"
-              ></div>
-              <h2 class="name">{{ r.name }}</h2>
-              <div class="description">
-                {{ r.description }}
-                <span class="website" v-if="r.url">
-                  <a :href="r.url" target="_blank"
-                    >Website</a
-                  >
-                </span>
-              </div>
+              class="img"
+              v-lazy:background-image="`/assets/img/residents/${r.id}.jpg`"
+              :alt="`Photo of ${r.name}`"
+            ></div>
+            <h2 class="name">{{ r.name }}</h2>
+            <div class="description">
+              {{ r.description }}
+              <span class="website" v-if="r.url">
+                <a :href="r.url" target="_blank">Website</a>
+              </span>
             </div>
           </div>
         </div>
@@ -220,7 +40,7 @@
 </template>
 
 <script>
-import PageSection from '~/components/PageSection.vue'
+import PageSection from "~/components/PageSection.vue";
 
 export default {
   components: {
@@ -228,213 +48,69 @@ export default {
   },
   data() {
     return {
-      en: {
-        current: [
-        ],
-        past: [{
-            id: 'eliza',
-            name: 'Eliza Soroga',
-            description:
-              'Site-Specific Performance Artist from Athens.',
-            url: 'http://www.elizasoroga.com/',
-          },
-          {
-            id: 'juliette',
-            name: 'Juliette Pénélope Pépin',
-            description: 'Artist',
-            url: 'https://juliettepenelope.com/',
-          },{
-            id: 'taina',
-            name: 'Tainá Guedes',
-            description: `Berlin-based artist, food activist, book author and trained cook.`,
-            url: 'https://entretempo-kitchen-gallery.com/',
-          },
-          {
-            id: 'harry',
-            name: 'Harry Lee',
-            description: 'Tea / Ceramic / Landscape artist',
-          },
-          {
-            id: 'misa',
-            name: 'Misa Murata',
-            description:
-              'Phytotherapist / Botanical artist',
-            url: 'https://verseau.me/',
-          },
-          {
-            id: 'pierre',
-            name: 'Pierre Verret',
-            description:
-              'Michelin-starred chef from Quebec.',
-          },
-          {
-            id: 'uenosono',
-            name: 'Uenosono Masato',
-            description: 'Architect and project director.',
-          },
-          {
-            id: 'kanako',
-            name: 'Kanako Shintaku',
-            description: 'Visual and sculptural artist.',
-            url: 'https://www.shintakukanako.com/',
-          },
-
-          {
-            id: 'eva',
-            name: 'Eva Ešnerová',
-            description: `Urban strategic planner and researcher from Prague, Czechia.`,
-            url: 'https://camp.ofcn.cz/en/index.html',
-          },
-        ],
-        upcoming: [
-          {
-            id: 'severin',
-            name: 'Studio B Severin',
-            description:
-              'Berlin-based design studio exploring culture and society.',
-            url: 'https://studiobseverin.com/',
-          },
-
-          {
-            id: 'august',
-            name: 'August Henry Moehrke',
-            description: `Visual artist located in New York City.`,
-            url: 'https://www.ahm-art.com/',
-          },
-          {
-            id: 'cleo',
-            name: 'Cléo Verstrepen',
-            description: `Graduate in cultural studies preparing research community art spaces.`,
-            url: 'https://www.instagram.com/cleoverstrepen/?hl=en',
-          },
-          {
-            id: 'rocky',
-            name: 'Rocky Hudson',
-            description: `Music maker, book maker, artist/writer.`,
-            url: 'https://rockyfuckinghudson.com',
-          },
-          {
-            id: 'erika',
-            name: 'Erika Rodríguez',
-            description: `Architect and scriptwriter researching appropiation of space. `,
-          },
-
-          {
-            id: 'lemos',
-            name: 'Lemos + Lehmann',
-            description:
-              'Perception, contemplation, and emotion.',
-            url: 'https://www.lemosandlehmann.com',
-          },
-        ],
-      },
-
-      ja: {
-        current: [],
-        past: [
-          {
-            id: 'eliza',
-            name: 'Eliza Soroga',
-            description: 'パフォーミングアーティスト',
-            url: 'http://www.elizasoroga.com/',
-          },
-          {
-            id: 'juliette',
-            name: 'Juliette Pénélope Pépin',
-            description: 'アーティスト',
-            url: 'https://juliettepenelope.com/',
-          },
-          {
-            id: 'taina',
-            name: 'Tainá Guedes',
-            description: `ベルリン 拠点のアーティスト、フードアクティビスト、シェフ`,
-            url: 'https://entretempo-kitchen-gallery.com/',
-          },
-          {
-            id: 'harry',
-            name: 'Harry Lee',
-            description:
-              '茶人 / 陶芸家 / ランドスケープアーティスト',
-          },
-          {
-            id: 'misa',
-            name: 'Misa Murata',
-            description: '植物療法士／植物表現家',
-            url: 'https://verseau.me/',
-          },
-          {
-            id: 'pierre',
-            name: 'Pierre Verret',
-            description: `ケベック出身のミシュランシェフ`,
-          },
-          {
-            id: 'uenosono',
-            name: 'Uenosono Masato',
-            description: `建築家・プロジェクトディレクター`,
-          },
-          {
-            id: 'kanako',
-            name: 'Kanako Shintaku',
-            description: `身体表現を行うアーティスト`,
-            url: 'https://www.shintakukanako.com/',
-          },
-
-          {
-            id: 'eva',
-            name: 'Eva Ešnerová',
-            description: `チェコ出身の都市戦略プランナー`,
-            url: 'https://camp.ofcn.cz/en/index.html',
-          },
-        ],
-        upcoming: [
-          {
-            id: 'severin',
-            name: 'Studio B Severin',
-            description: `ベルリン拠点のデザインスタジオ`,
-            url: 'https://studiobseverin.com/',
-          },
-          {
-            id: 'august',
-            name: 'August Henry Moehrke',
-            description: `ニューヨーク拠点のビジュアルアーティスト`,
-            url: 'https://www.ahm-art.com/',
-          },
-          {
-            id: 'cleo',
-            name: 'Cléo Verstrepen',
-            description: `コミュニティ・アート・スペースのリサーチャー`,
-            url: 'https://www.instagram.com/cleoverstrepen/?hl=en',
-          },
-          {
-            id: 'rocky',
-            name: 'Rocky Hudson',
-            description: `アーティスト、ミュージックメーカー`,
-            url: 'https://rockyfuckinghudson.com',
-          },
-          {
-            id: 'erika',
-            name: 'Erika Rodríguez',
-            description: `シネマティックな都市の言語を研究する建築家、劇作家`,
-          },
-          {
-            id: 'lemos',
-            name: 'Lemos + Lehmann',
-            description: 'アーティスト・デュオ',
-            url: 'https://www.lemosandlehmann.com',
-          },
-        ],
-      },
-    }
+      upcoming: [
+        {
+          id: "mariko",
+          name: "杉田真理子",
+          description: `都市デザイナー`,
+          url: "https://linktr.ee/MarikoSugita",
+        },
+        {
+          id: "shotaro",
+          name: "市橋正太郎",
+          description: `写真家、編集者`,
+        },
+        {
+          id: "kanami",
+          name: "市橋加奈美",
+          description: `料理家`,
+        },
+        {
+          id: "matsumoto",
+          name: "松本伸哉",
+          description: `屋店主`,
+        },
+        {
+          id: "ishikawa",
+          name: "石川史雄",
+          description: `作業運動療法員`,
+        },
+        {
+          id: "maiko",
+          name: "いしかわまい子",
+          description: "コミュニティーナース",
+        },
+        {
+          id: "deguchi",
+          name: "出口賢",
+          description: "プログラマー",
+        },
+        {
+          id: "asae",
+          name: "伊貝麻恵",
+          description: "医療事務",
+        },
+        {
+          id: "miki",
+          name: "三木佐和子",
+          description: "フリー精神保健福祉士",
+        },
+        {
+          id: "lemos",
+          name: "岡本まき",
+          description: "フリー精神保健福祉士",
+        },
+      ],
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .section {
-  --bg: var(--accentl1);
   --side-pad: 5%;
 
-  background: var(--bg);
+  background: white;
   width: 100%;
   overflow-x: hidden;
   padding-left: 0;

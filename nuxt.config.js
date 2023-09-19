@@ -3,24 +3,21 @@ export default {
   target: 'static',
 
   head: {
-    titleTemplate(titleChunk) {
-      return `Bridge To` + (titleChunk ? ' ' + titleChunk : '')
-    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { property: 'og:title', hid: `og:title`, content: 'Bridge To Kyoto' },
+      { property: 'og:title', hid: `og:title`, content: 'ホホホ座浄土寺座' },
       {
         property: 'og:description',
         hid: `og:description`,
         content: 'Open Call: An urbanist residency in Kyoto, Japan',
       },
       { hid: `og:type`, property: 'og:type', content: 'website' },
-      { hid: `og:site_name`, property: 'og:site_name', content: 'Bridge To' },
+      { hid: `og:site_name`, property: 'og:site_name', content: 'ホホホ座浄土寺座' },
       {
         hid: `og:image`,
         property: 'og:image',
-        content: `https://www.brdg.to/assets/img/sitethumbnail.png`,
+        content: `http://joudojiza.sakura.ne.jp/assets/img/newlogo.png`,
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -35,19 +32,14 @@ export default {
   i18n: {
     locales: [
       {
-        code: 'en',
-        iso: 'en-US',
-        name: 'English',
-      },
-      {
         code: 'ja',
         iso: 'ja-JP',
         name: '日本語',
       },
     ],
-    defaultLocale: 'en',
+    defaultLocale: 'ja',
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'ja',
     },
     vuex: {
       syncLocale: true,

@@ -1,23 +1,29 @@
 <template>
   <PageSection class="section" id="space">
     <div
-      v-lazy:background-image="
-        '/assets/img/2023/1.jpg'
-      "
+      v-lazy:background-image="'/assets/img/2023/jodoji1.jpeg'"
       class="interstitial"
     >
       <div class="overlay"></div>
     </div>
 
     <div class="contentcolumn">
-      <h1>Our Space</h1>
+      <h1>Spaces</h1>
+
       <div class="leftright">
-        <div class="sticky">
-          <ConditionalIllustration
-            class="house"
-            :activeItem="activeItem"
+        <div class="mapholder sticky">
+          <img
+            class="pointer"
+            src="/assets/img/map_pointer.png"
+            :style="{
+              top: pointerTop * 100 + '%',
+              left: pointerLeft * 100 + '%',
+            }"
           />
+
+          <img class="map" :src="`/assets/img/map_fade.jpg`" />
         </div>
+
         <div class="text">
           <div
             ref="intro"
@@ -26,188 +32,229 @@
             :class="{
               active: isMobile || activeItem === 'intro',
             }"
+            :top="0.5"
+            :left="-1"
           >
-            <template v-if="$i18n.locale === 'ja'">
-              <p>
-                戦後に建てられた京都の古い一軒家。目の前には川が走り、このエリアで唯一という個人用の橋がかかっています。2019年に改装・補強をし、アーバニストのクリエイティブレジデンスおよびコミュニティスペースとしてオープンしました。コンパクトなスペースですが、自分達自身の棲家としながら、イベント・ギャラリー・ワークショップなど多目的に使用しています。
-              </p>
-              <p>
-              </p>
-            </template>
-            <template v-else>
-              <p>
-                Bridge To Kyoto is based in an old, postwar,
-                Kyoto-style home with a stream flowing in
-                front and a bridge (yes, the name isn't only
-                metaphorical!) crossing over it to enter.
-                After a renovation in 2019, it has found new
-                life as a creative residence and community
-                space. Though small, it functions fully as a
-                residence as well as an event, gallery, and
-                workshop space.
-              </p>
-              <p>
-                Having remodeled a large portion of the
-                space by hand, we welcome all those with a
-                DIY spirit. On top of that, we use renewable
-                energy, try to limit plastic and
-                one-time-use products as much as possible,
-                and do our best to keep our establishment
-                zero-waste. We're working to continue to
-                shift the conversation around how valuable
-                Japan's old and vacant houses are, and how
-                possible it is renovate them using materials
-                that are good for the environment.
-              </p>
-            </template>
+            <p>
+              ホホホ座浄土寺座が管理している、もしく連携している拠点の一覧です。イベントやワークショップ、展覧会、宿などを通して地域の活動に開いた使い方をしています。ご使用を希望される方は、お問い合わせください。
+              <a
+                href="https://www.google.com/maps/d/u/3/edit?mid=1dkzrlCFpr0rIwb3DVTnvd736F2Ixw8A&usp=sharing"
+                target="_blank"
+                >こちら</a
+              >の地図でもご覧頂けます。
+            </p>
           </div>
 
           <div
-            ref="residence"
-            label="residence"
+            ref="浄土寺センター"
+            label="浄土寺センター"
             class="textsection"
             :class="{
-              active:
-                isMobile || activeItem === 'residence',
+              active: isMobile || activeItem === '浄土寺センター',
             }"
+            :top="0.42"
+            :left="0.56"
           >
-            <ConditionalIllustration
-              v-if="isMobile"
-              class="mobilehouse"
-              activeItem="residence"
-            />
-            <h2>Residence</h2>
-            <template v-if="$i18n.locale === 'ja'">
-              <p>
-                Bridge To
-                Kyotoには滞在用の寝室が2階に1部屋あります。
-              </p>
-            </template>
-            <template v-else>
-              <p>
-                We currently don't have a room open for
-                residency (we live here!) but while we're
-                abroad we rent the whole house to
-                creative-minded people who are also
-                interested in hosting pop-up exhibitions
-                &amp; events in our space during their stay.
-                We're also planning to expand to more spaces
-                in the same neighborhood in Kyoto, so
-                message us if you're looking for a
-                residency!
-              </p>
-            </template>
+            <h2>ホホホ座ねどこ／浄土寺センター</h2>
+            <p>
+              ホホホ座浄土寺座の活動拠点となる建物です。1階に古書・雑貨店、2階に1日1組限定の宿があります。1階では、福祉にまつわる事柄、空き家、物品の処分など、地域の困りごと相談を受け付けています。2階は、宿泊機能のほか、展示、イベントスペースとしても使用出来ます。室内は、化学物質過敏症の方に配慮した内装となっています。
+            </p>
+          </div>
+
+          <!-- <div
+            ref="ホホホ座ねどこ"
+            label="ホホホ座ねどこ"
+            class="textsection"
+            :class="{
+              active: isMobile || activeItem === 'ホホホ座ねどこ',
+            }"
+            :top="0.42"
+            :left="0.56"
+          >
+            <h2>ホホホ座ねどこ</h2>
+            <p>
+              ホホホ座浄土寺店の斜め前、1日1組限定のお宿です。室内は、琉球漆喰、土壁、荏胡麻油、亜麻仁油、柿渋等、なるべく自然由来の素材を使用し、廃材を活用した空間になっています。詳細は<a
+                href="http://hohohoza.com/news/3609"
+                target="_blank"
+                >こちら</a
+              >
+            </p>
+          </div> -->
+
+          <div
+            ref="ホホホ座コミュニティスペース"
+            label="ホホホ座コミュニティスペース"
+            class="textsection"
+            :class="{
+              active: isMobile || activeItem === 'ホホホ座コミュニティスペース',
+            }"
+            :top="0.42"
+            :left="0.55"
+          >
+            <h2>ホホホ座コミュニティスペース（仮）</h2>
+            <p>
+              （現在改装中）2023年冬にオープン予定の、ホホホ座浄土寺座が運営するコミュニティスペースです。当面は、月1回開催していた「0えんマーケット」を常設します。キッチンスペースを作り、飲食サービス、食料品の販売も不定期に開催する予定です。
+              世代を問わないサロン活動、各種会合にも使える開かれたスペースを目指しています。
+            </p>
           </div>
 
           <div
-            ref="workshop"
-            label="workshop"
+            ref="ホホホ座"
+            label="ホホホ座"
             class="textsection"
             :class="{
-              active: isMobile || activeItem === 'workshop',
+              active: isMobile || activeItem === 'ホホホ座',
             }"
+            :top="0.42"
+            :left="0.55"
           >
-            <ConditionalIllustration
-              v-if="isMobile"
-              class="mobilehouse workshop"
-              activeItem="workshop"
-            />
-
-            <h2>Library</h2>
-            <template v-if="$i18n.locale === 'ja'">
-            </template>
-            <template v-else>
-              <p>
-                The library is regularly open to the public,
-                showcasing our collection of publications
-                and items in the fields of architecture and
-                urbanism with the intention of creating a
-                hub for open research and dialogue.
-              </p>
-            </template>
-
-            <h2>Event Space</h2>
-            <template v-if="$i18n.locale === 'ja'">
-              <p>
-                1階のリビングダイニングと2階のダイニングルームは、ライブラリーとイベントスペースとして使用できます。世界中から集まった建築・都市・まちづくり関係の本、雑誌、ZINE、ポスター、グッズ、古物などを楽しんで頂けます。
-              </p>
-              <p>◉ライブラリー利用方法<br>最大収容人数：10名程度<br>利用可能日時: 毎週土曜日（変動あり）<br>利用時間：11:00～17:00<br>利用料金：無料（3月のみ）<br>設備：WIFI・冷暖房・トイレ<br>お申し込み方法：InstagramかfacebookにてDM</p>
-              <p>イベント内容と日時は
-                <a
-                  href="https://www.facebook.com/bridgetokyoto/"
-                  target="_blank"
-                  >Facebook</a
-                >か
-                <a
-                  href="https://www.instagram.com/bridgetokyoto/"
-                  target="_blank"
-                  >Instagram</a
-                >からご確認ください。</p>
-              <p></p>
-              <p></p>
-　　　　　　　　<p></p>
-            </template>
-            <template v-else>
-              <p>
-                Our tatami-floored living &amp; dining
-                spaces double as community space for events
-                of all kinds, such as exhibitions of your
-                work, meetups to engage and collaborate with
-                local urbanists, and more. There are also
-                regularly scheduled city-related workshops
-                and events held in the community space,
-                outside of what the residents themselves
-                organize. Follow our
-                <a
-                  href="https://www.facebook.com/bridgetokyoto/"
-                  target="_blank"
-                  >Facebook</a
-                >
-                or
-                <a
-                  href="https://www.instagram.com/bridgetokyoto/"
-                  target="_blank"
-                  >Instagram</a
-                >
-                for more information about our events!
-              </p>
-              <p>
-                The space has a capacity of about 10–15
-                people.
-              </p>
-            </template>
+            <h2>ホホホ座浄土寺店</h2>
+            <p>
+              一般書籍から、ZINE、雑貨まで。浄土寺のランドマークとなるお店です。店内では、さまざまな展示企画やトークイベント、ときには音楽のライブも開催されます。本の取り寄せや配達など、昔ながらの書店サービスも行っています。
+            </p>
           </div>
 
           <div
-            ref="bridge"
-            label="bridge"
+            ref="Hand Saw Press"
+            label="Hand Saw Press"
             class="textsection"
             :class="{
-              active: isMobile || activeItem === 'bridge',
+              active: isMobile || activeItem === 'Hand Saw Press',
             }"
+            :top="0.42"
+            :left="0.55"
           >
-            <ConditionalIllustration
-              v-if="isMobile"
-              class="mobilehouse bridge"
-              activeItem="bridge"
-            />
-            <h2>Bridge &amp; Garden</h2>
-            <template v-if="$i18n.locale === 'ja'">
-              <p>
-                家の前にある個人用の橋の他、コンパクトなガーデンスペースもあり、アーバンガーデニングなど実験的な取り組みが行えます。
-              </p>
-            </template>
-            <template v-else>
-              <p>
-                There's a stream running in front of our
-                space, and we have the area's only private
-                bridge. There's also a small garden, and
-                anyone interested in urban gardening is
-                welcome to participate in its upkeep and
-                expansion.
-              </p>
-            </template>
+            <h2>Hand Saw Press</h2>
+            <p>
+              ホホホ座浄土寺店と同じフロアにある、日本初のリソグラフスタジオ「hand
+              saw
+              press」の京都店です。冊子、ポスター、アートプリントなど、リソグラフを用いたあらゆる表現を追求しており、企画、デザイン、編集を含んだ、総合的なディレクションが可能です。
+            </p>
           </div>
+
+          <div
+            ref="Bridge To"
+            label="Bridge To"
+            class="textsection"
+            :class="{
+              active: isMobile || activeItem === 'Bridge To',
+            }"
+            :top="0.34"
+            :left="0.62"
+          >
+            <h2>Bridge To</h2>
+            <p>
+              「都市」をテーマにした、建築・街づくり・アートなど都市に関わる実践者のための私設ライブラリー&イベントスペースです。都市や建築をフィールドに活動を行うアーティストが1〜6ヶ月の期間で滞在して活動できるアーバニスト・イン・レジデンスとしても機能してきました。ポップアップのイベントやワークショップの開催が可能です。
+            </p>
+            <p>
+              HP:
+              <a href="https://www.brdg.to//" target="_blank"
+                >https://www.brdg.to/</a
+              >
+            </p>
+          </div>
+
+          <div
+            ref="浄土寺協業センター"
+            label="浄土寺協業センター"
+            class="textsection"
+            :class="{
+              active: isMobile || activeItem === '浄土寺協業センター',
+            }"
+            :top="0.34"
+            :left="0.7"
+          >
+            <h2>浄土寺座協業スペース</h2>
+            <p>
+              哲学の道ほど近くにあるコンパクトな多目的スペースです。1階がキッチンのあるフリースペース。2階は整体など身体にまつわる施術、ワークショップにも使用出来ます。本のライブラリー機能もあり、絵本の読みきかせや読書会なども開催予定。地域に開かれたコミュニティスペースとして目的に応じた使用が出来ます。
+            </p>
+          </div>
+
+          <div
+            ref="新南田町集会所"
+            label="新南田町集会所"
+            class="textsection"
+            :class="{
+              active: isMobile || activeItem === '新南田町集会所',
+            }"
+            :top="0.4"
+            :left="0.7"
+          >
+            <h2>新南田町集会所</h2>
+            <p>
+              新南田町の集会所。広めの座敷で、打ち合わせやイベントなどさまざまな用途に使えます。
+            </p>
+          </div>
+
+          <div
+            ref="託児所"
+            label="託児所"
+            class="textsection"
+            :class="{
+              active: isMobile || activeItem === '託児所',
+            }"
+            :top="0.41"
+            :left="0.7"
+          >
+            <h2>ホホホ座おやこのごろね</h2>
+            <p>
+              ０歳児も預かることが出来る、認定外保育施設（京都市指定）を併設した産前産後「おかあさん支援」の場です。大人用ベッドもあり、おかあさんもゆっくり休むことが出来ます。単純な子育て支援だけではなく、左京区〜浄土寺が持つ、地域文化を絡めた子育て生活のサポートをします。詳細は
+              <a
+                href="https://9514588814.amebaownd.com/?fbclid=PAAaZvI10q15JTJtDIgPP8cIlGDIjYLypskvX2ncoi2nt9mCT7WkPvZQPYB0Y"
+                target="_blank"
+                >こちら</a
+              >
+            </p>
+          </div>
+
+          <div
+            ref="ギャラリー桜谷町47"
+            label="ギャラリー桜谷町47"
+            class="textsection"
+            :class="{
+              active: isMobile || activeItem === 'ギャラリー桜谷町47',
+            }"
+            :top="0.59"
+            :left="0.64"
+          >
+            <h2>ギャラリー桜谷町47</h2>
+            <p>
+              哲学の道沿いにある安楽寺のギャラリーです。宿泊スペース、キッチン、簡易シャワーもあり、滞在型の展示、物販、飲食系のイベントなど、多用途に使用出来ます。春と秋の観光シーズン、大型連休の期間は基本使用出来ません。また、閑静な場所にあるため、大きな音が出るイベントも不可となります。
+            </p>
+          </div>
+
+          <div
+            ref="安楽寺"
+            label="安楽寺"
+            class="textsection"
+            :class="{
+              active: isMobile || activeItem === '安楽寺',
+            }"
+            :top="0.5"
+            :left="0.8"
+          >
+            <h2>京都住蓮山安楽寺</h2>
+            <p>
+              鹿ヶ谷の山麓に位置する、かぼちゃ供養で知られる浄土宗系単立のお寺です。本殿、書院を使った展示企画、井戸のあるキッチンを備えた客殿「椛（もみじ）」ではライブや飲食系イベントも催され、地域に開かれた寺院として知られています。コロナ禍で中止になっていた「くさの地蔵縁日」は、2024年から再開予定です。
+            </p>
+          </div>
+
+          <div
+            ref="岡崎倉庫"
+            label="岡崎倉庫"
+            class="textsection"
+            :class="{
+              active: isMobile || activeItem === '岡崎倉庫',
+            }"
+            :top="0.73"
+            :left="0.23"
+          >
+            <h2>天王町倉庫</h2>
+            <p>
+              倉庫、制作スペース、ラボ機能を併設した大型倉庫です。古材に限らず、古道具、古書など、多種多様なリサイクル品目を保管しています。施設内は非公開となっていますが、事前予約制で見学可能です。
+            </p>
+          </div>
+
           <div class="spacer" v-if="!isMobile"></div>
         </div>
       </div>
@@ -216,67 +263,57 @@
 </template>
 
 <script>
-import PageSection from '~/components/PageSection.vue'
-import useWindowWidth from '~/components/mixins/useWindowWidth'
-import ConditionalIllustration from '~/components/ConditionalIllustration.vue'
+import PageSection from "~/components/PageSection.vue";
+import useWindowWidth from "~/components/mixins/useWindowWidth";
 
 export default {
-  components: {
-    PageSection,
-    ConditionalIllustration,
-  },
+  components: { PageSection },
   mixins: [useWindowWidth],
 
   data() {
     return {
       observer: null,
-      activeItem: 'intro',
-    }
+      activeItem: "intro",
+      pointerTop: 0.5,
+      pointerLeft: -1,
+    };
   },
   computed: {
     instersectionThreshold() {
-      return this.isMobile ? 0.1 : 0.9
+      return this.isMobile ? 0.1 : 0.9;
     },
   },
   mounted() {
-    let toObserve = [
-      this.$refs.intro,
-      this.$refs.residence,
-      this.$refs.workshop,
-      this.$refs.bridge,
-    ]
-    this.observer = new IntersectionObserver(
-      this.intersectEvent,
-      {
-        threshold: this.instersectionThreshold,
-      },
-    )
-    toObserve.forEach((el) => this.observer.observe(el))
+    let toObserve = [...Object.values(this.$refs)];
+    this.observer = new IntersectionObserver(this.intersectEvent, {
+      threshold: this.instersectionThreshold,
+    });
+    toObserve.forEach((el) => this.observer.observe(el));
   },
   beforeDestroy() {
-    this.observer.disconnect()
-    this.observer = null
+    this.observer.disconnect();
+    this.observer = null;
   },
   methods: {
     intersectEvent(entries, observer) {
       entries.forEach((entry) => {
-        // console.log(entry.intersectionRatio, entry.target)
         if (
           !this.isMobile &&
-          entry.intersectionRatio >
-            this.instersectionThreshold
-        )
-          this.activeItem =
-            entry.target.getAttribute('label')
-      })
+          entry.intersectionRatio > this.instersectionThreshold
+        ) {
+          this.activeItem = entry.target.getAttribute("label");
+          this.pointerTop = parseFloat(entry.target.getAttribute("top"));
+          this.pointerLeft = parseFloat(entry.target.getAttribute("left"));
+        }
+      });
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .section {
-  --bg: #a2ffc4;
+  --bg: white;
   background: var(--bg);
 
   @media (max-width: 768px) {
@@ -307,24 +344,24 @@ export default {
 .sticky {
   position: sticky;
   top: 15vh;
-  z-index: 3;
+  z-index: 0;
 
   @media (max-width: 768px) {
     position: relative;
     top: 0;
   }
 }
-.house {
-  width: 180%;
+.mapholder {
+  transform: scale(1.5);
+}
+.map {
   position: relative;
-  left: -70%;
-
-  @media (max-width: 768px) {
-    width: 145%;
-    left: -40%;
-    padding: 12vh 0 4vh 0;
-    background: var(--bg);
-  }
+}
+.pointer {
+  transform: translate(-50%, -50%) scale(0.5);
+  position: absolute;
+  z-index: 3;
+  transition: all 0.5s ease-in-out;
 }
 
 .mobilehouse {
@@ -370,6 +407,10 @@ p {
   margin-bottom: 1.2em;
 }
 
+.text {
+  position: relative;
+  z-index: 4;
+}
 .textsection {
   margin-bottom: 20em;
   transition: all 0.2s;

@@ -3,8 +3,6 @@
     <Intro />
     <About />
     <Space />
-    <Insta />
-    <Apply />
     <Residents />
     <FAQ />
     <TCU />
@@ -13,63 +11,55 @@
 </template>
 
 <script>
-import Intro from '~/components/sections/Intro.vue'
-import About from '~/components/sections/About.vue'
-import Space from '~/components/sections/Space.vue'
-import Apply from '~/components/sections/Apply.vue'
-import TCU from '~/components/sections/TCU.vue'
-import FAQ from '~/components/sections/FAQ.vue'
-import Insta from '~/components/sections/Insta.vue'
-import Residents from '~/components/sections/Residents.vue'
-import Contact from '~/components/sections/Contact.vue'
+import Intro from "~/components/sections/Intro.vue";
+import About from "~/components/sections/About.vue";
+import Space from "~/components/sections/Space.vue";
+import TCU from "~/components/sections/TCU.vue";
+import FAQ from "~/components/sections/FAQ.vue";
+import Residents from "~/components/sections/Residents.vue";
+import Contact from "~/components/sections/Contact.vue";
 
 export default {
   head() {
     return {
-      title: 'Kyoto',
+      title: "ホホホ座浄土寺座",
       meta: [
         {
-          property: 'og:title',
+          property: "og:title",
           hid: `og:title`,
-          content: 'Bridge To Kyoto',
+          content: "ホホホ座浄土寺座",
         },
         {
-          property: 'twitter:title',
+          property: "twitter:title",
           hid: `twitter:title`,
-          content: 'Bridge To Kyoto',
-        },
-        {
-          hid: `og:url`,
-          property: 'og:url',
-          content: `https://www.brdg.to/`,
+          content: "ホホホ座浄土寺座",
         },
         {
           hid: `og:site_name`,
-          property: 'og:site_name',
-          content: 'Bridge To Kyoto',
+          property: "og:site_name",
+          content: "ホホホ座浄土寺座",
         },
       ],
-    }
+    };
   },
   components: {
     Intro,
     About,
     Space,
-    Apply,
+    // Apply,
     TCU,
     FAQ,
-    Insta,
+    // Insta,
     Contact,
     Residents,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 main {
   width: 100%;
   min-height: 100vh;
-  background: var(--accent);
 }
 
 .intro {

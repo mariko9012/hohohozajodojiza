@@ -2,41 +2,14 @@
   <PageSection class="section" id="tcu">
     <div
       class="bgimage"
-      v-lazy:background-image="'/assets/img/tcu.jpg'"
+      v-lazy:background-image="'/assets/img/monopatarn1-4c.png'"
     ></div>
     <div class="contentcolumn">
       <h1>Blog</h1>
-      <template v-if="$i18n.locale === 'ja'">
-        <p>
-          世界各地の都市から、建築・都市・まちづくりに関わる事例を紹介する
-          <a :href="localeLink" target="_blank"
-            >Traveling Circus of Urbanism</a
-          >を運営しています。
-        </p>
-        <a
-          class="button"
-          :href="localeLink"
-          target="_blank"
-        >
-          <div>ブログを読む</div>
-        </a>
-      </template>
-      <template v-else>
-        <p>
-          We also run a website called
-          <a :href="localeLink" target="_blank"
-            >Traveling Circus of Urbanism</a
-          >, where we cover global and local urban practices
-          and ideas.
-        </p>
-        <a
-          class="button"
-          :href="localeLink"
-          target="_blank"
-        >
-          <div>Check it out!</div>
-        </a>
-      </template>
+      <p>NOTEにて、浄土寺での日々の活動を不定期更新しています。</p>
+      <a class="button" :href="localeLink" target="_blank">
+        <div>ブログを読む</div>
+      </a>
     </div>
   </PageSection>
 </template>
@@ -46,15 +19,15 @@ import PageSection from "~/components/PageSection.vue";
 
 export default {
   components: {
-    PageSection
+    PageSection,
   },
   computed: {
     localeLink() {
       return this.$i18n.locale === "ja"
-        ? "https://www.travelingcircusofurbanism.com/ja"
-        : "https://www.travelingcircusofurbanism.com";
-    }
-  }
+        ? "https://note.com/hohohozajodojiza/"
+        : "https://note.com/hohohozajodojiza/";
+    },
+  },
 };
 </script>
 

@@ -1,9 +1,7 @@
 <template>
   <PageSection class="section" id="contact">
     <div
-      v-lazy:background-image="
-        '/assets/img/2023/7.jpg'
-      "
+      v-lazy:background-image="'/assets/img/2023/jodoji3.jpeg'"
       class="interstitial"
     >
       <div class="overlay"></div>
@@ -13,42 +11,42 @@
       <h1>Contact Us</h1>
       <template v-if="$i18n.locale === 'ja'">
         <div class="p">
-          <div>ご質問やご相談は、</div>
+          <div>ご質問やご相談は、お気軽にメールをください。</div>
           <a
             class="button"
-            href="mailto:bridgetoresidency@gmail.com"
+            href="mailto:hohohozajodojiza@gmail.com"
             target="_blank"
           >
-            <div>メールをください。</div>
+            <div>問い合わせをする</div>
           </a>
         </div>
-        <div>
+        <!-- <div>
           We are here:
           <blockquote>
             28-3 Jodoji Banbacho, Sakyo-ku, Kyoto, 606-8412
             <br />〒606-8412 京都市左京区浄土寺馬場町28-3
           </blockquote>
-        </div>
+        </div> -->
       </template>
       <template v-else>
         <div class="p">
           <div>Still have questions?</div>
           <a
             class="button"
-            href="mailto:bridgetoresidency@gmail.com"
+            href="mailto:hohohozajodojiza@gmail.com"
             target="_blank"
           >
             <div>Email us!</div>
           </a>
         </div>
-        <div>
+        <!-- <div>
           We are located at:
           <blockquote>
             28-3 Jōdoji Banbachō, Sakyō-ku, Kyoto, 606-8412
             <br />〒606-8412 京都市左京区浄土寺馬場町28-3
           </blockquote>
         </div>
-      </template>
+   
       <iframe
         width="600"
         height="450"
@@ -56,26 +54,27 @@
         style="border:0"
         src="https://www.google.com/maps/embed/v1/place?q=606-8412%20%E4%BA%AC%E9%83%BD%E5%B8%82%E5%B7%A6%E4%BA%AC%E5%8C%BA%E6%B5%84%E5%9C%9F%E5%AF%BA%E9%A6%AC%E5%A0%B4%E7%94%BA28-3&key=AIzaSyCHF6DdpDLIG-1Ak4p0XyIK2Bc6DbVmgLY"
         allowfullscreen
-      ></iframe>
+      ></iframe> -->
+      </template>
     </div>
   </PageSection>
 </template>
 
 <script>
-import PageSection from '~/components/PageSection.vue'
+import PageSection from "~/components/PageSection.vue";
 
 export default {
   components: {
     PageSection,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .section {
-  --bg: #333;
-  background: #333;
-  color: white;
+  --bg: white;
+  background: white;
+  color: black;
   padding-bottom: 30vh;
   padding-top: 0;
 }
@@ -101,6 +100,16 @@ h1 {
   text-transform: uppercase;
   font-weight: 600;
   opacity: 0.4;
+}
+
+.interstitial {
+  margin-bottom: 0;
+}
+
+.contentcolumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 blockquote {
