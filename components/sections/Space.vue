@@ -171,18 +171,18 @@
           </div>
 
           <div
-            ref="新南田町集会所"
-            label="新南田町集会所"
+            ref="下南田町集会所"
+            label="下南田町集会所"
             class="textsection"
             :class="{
-              active: isMobile || activeItem === '新南田町集会所',
+              active: isMobile || activeItem === '下南田町集会所',
             }"
             :top="0.4"
             :left="0.7"
           >
-            <h2>新南田町集会所</h2>
+            <h2>下南田町集会所</h2>
             <p>
-              新南田町の集会所。広めの座敷で、打ち合わせやイベントなどさまざまな用途に使えます。
+              下南田町の集会所。広めの座敷で、打ち合わせやイベントなどさまざまな用途に使えます。
             </p>
           </div>
 
