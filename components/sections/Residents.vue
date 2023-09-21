@@ -71,7 +71,7 @@ export default {
           description: `屋店主`,
         },
         {
-          id: "ishikawa",
+          id: "Ishikawa",
           name: "石川史雄",
           description: `作業運動療法員`,
         },

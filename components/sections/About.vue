@@ -26,7 +26,7 @@
         </div>
 
         <div class="illustration ill2">
-          <img src="/assets/img/大文字2.png" />
+          <img src="/assets/img/daimonji.png" />
         </div>
 
         <div class="flex text1">
@@ -44,7 +44,7 @@
         </div>
 
         <div class="illustration ill3">
-          <img src="/assets/img/古材流通不動産2.png" />
+          <img src="/assets/img/kozai_hudousan.png" />
         </div>
 
         <div class="flex text2">
@@ -57,7 +57,7 @@
         </div>
 
         <div class="illustration ill4">
-          <img src="/assets/img/コミュニティースペース1.png" />
+          <img src="/assets/img/community_space.png" />
         </div>
 
         <div class="flex text1">
@@ -70,7 +70,7 @@
         </div>
 
         <div class="illustration ill5">
-          <img src="/assets/img/地域福祉2.png" />
+          <img src="/assets/img/tiiki_fukushi.png" />
         </div>
 
         <div class="flex text2">
@@ -83,7 +83,7 @@
         </div>
 
         <div class="illustration ill6">
-          <img src="/assets/img/イベントワークショップ1.png" />
+          <img src="/assets/img/event_workshop.png" />
         </div>
 
         <div class="flex text1">
@@ -96,7 +96,7 @@
         </div>
 
         <div class="illustration ill7">
-          <img src="/assets/img/公開住民会議2.png" />
+          <img src="/assets/img/koukai_kaigi.png" />
         </div>
 
         <div class="flex text2">
@@ -109,7 +109,7 @@
         </div>
 
         <div class="illustration ill8">
-          <img src="/assets/img/食3.png" />
+          <img src="/assets/img/syoku.png" />
         </div>
       </div>
     </div>
