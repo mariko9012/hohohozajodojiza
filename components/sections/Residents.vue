@@ -96,7 +96,7 @@ export default {
           description: "フリー精神保健福祉士",
         },
         {
-          id: "lemos",
+          id: "maki",
           name: "岡本まき",
           description: "フリー精神保健福祉士",
         },
