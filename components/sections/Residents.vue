@@ -1,7 +1,7 @@
 <template>
   <PageSection class="section contentcolumn full" id="residents">
     <div
-      v-lazy:background-image="'/assets/img/2023/jodoji2.jpeg'"
+      v-lazy:background-image="'/assets/img/2023/jodoji2.jpg'"
       class="interstitial"
     >
       <div class="overlay"></div>

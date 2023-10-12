@@ -1,7 +1,7 @@
 <template>
   <PageSection class="section" id="contact">
     <div
-      v-lazy:background-image="'/assets/img/2023/jodoji3.jpeg'"
+      v-lazy:background-image="'/assets/img/2023/jodoji3.jpg'"
       class="interstitial"
     >
       <div class="overlay"></div>
