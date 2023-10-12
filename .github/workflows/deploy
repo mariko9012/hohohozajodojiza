@@ -12,7 +12,7 @@ jobs:
       with:
         node-version: 16
     - run: npm ci
-    - run: npm run generete
+    - run: npm run generate
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
