@@ -68,7 +68,7 @@ export default {
         {
           id: "matsumoto",
           name: "松本伸哉",
-          description: `屋店主`,
+          description: `書店主`,
         },
         {
           id: "Ishikawa",
