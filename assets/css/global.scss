@@ -108,7 +108,6 @@ h1 {
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
-    color: #ffffff
   }
 }
 
@@ -122,7 +121,14 @@ h2 {
 
   @media (max-width: 768px) {
     font-size: 1.3rem;
-    color: #ffffff
+  }
+}
+
+.introtext {
+  h1, h2 {
+    @media (max-width: 768px) {
+      color: #ffffff
+    }
   }
 }
 
