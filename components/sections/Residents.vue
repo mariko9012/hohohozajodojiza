@@ -69,6 +69,7 @@ export default {
           id: "matsumoto",
           name: "松本伸哉",
           description: `書店主`,
+          url: "http://hohohoza.com"
         },
         {
           id: "Ishikawa",
