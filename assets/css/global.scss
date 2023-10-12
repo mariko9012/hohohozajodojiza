@@ -124,6 +124,14 @@ h2 {
   }
 }
 
+.introtext {
+  h1, h2 {
+    @media (max-width: 768px) {
+      color: #ffffff
+    }
+  }
+}
+
 h3 {
   margin-top: 1.5em;
   margin-bottom: 0.4em;

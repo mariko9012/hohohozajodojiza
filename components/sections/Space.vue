@@ -1,7 +1,7 @@
 <template>
   <PageSection class="section" id="space">
     <div
-      v-lazy:background-image="'/assets/img/2023/jodoji1.jpeg'"
+      v-lazy:background-image="'/assets/img/2023/jodoji1.jpg'"
       class="interstitial"
     >
       <div class="overlay"></div>
@@ -37,11 +37,13 @@
           >
             <p>
               ホホホ座浄土寺座が管理している、もしく連携している拠点の一覧です。イベントやワークショップ、展覧会、宿などを通して地域の活動に開いた使い方をしています。ご使用を希望される方は、お問い合わせください。
+              <!--
               <a
                 href="https://www.google.com/maps/d/u/3/edit?mid=1dkzrlCFpr0rIwb3DVTnvd736F2Ixw8A&usp=sharing"
                 target="_blank"
                 >こちら</a
               >の地図でもご覧頂けます。
+              -->
             </p>
           </div>
 
@@ -193,8 +195,8 @@
             :class="{
               active: isMobile || activeItem === '託児所',
             }"
-            :top="0.41"
-            :left="0.7"
+            :top="0"
+            :left="0"
           >
             <h2>ホホホ座おやこのごろね</h2>
             <p>

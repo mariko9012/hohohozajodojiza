@@ -1,7 +1,7 @@
 <template>
   <PageSection class="section contentcolumn full" id="residents">
     <div
-      v-lazy:background-image="'/assets/img/2023/jodoji2.jpeg'"
+      v-lazy:background-image="'/assets/img/2023/jodoji2.jpg'"
       class="interstitial"
     >
       <div class="overlay"></div>
@@ -68,7 +68,8 @@ export default {
         {
           id: "matsumoto",
           name: "松本伸哉",
-          description: `屋店主`,
+          description: `書店主`,
+          url: "http://hohohoza.com"
         },
         {
           id: "Ishikawa",
