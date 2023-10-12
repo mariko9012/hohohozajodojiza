@@ -17,7 +17,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v3.1.2
       with:
-        ftp-server: joudojiza.sakura.ne.jp
+        ftp-server: ftp://joudojiza.sakura.ne.jp/~www/
         ftp-username: joudojiza
         ftp-password: ${{ secrets.PASSWORD }}
         local-dir: ./dist/
