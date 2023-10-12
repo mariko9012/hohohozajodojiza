@@ -193,8 +193,8 @@
             :class="{
               active: isMobile || activeItem === '託児所',
             }"
-            :top="0.41"
-            :left="0.7"
+            :top="0"
+            :left="0"
           >
             <h2>ホホホ座おやこのごろね</h2>
             <p>
