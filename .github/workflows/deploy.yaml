@@ -21,4 +21,3 @@ jobs:
         ftp-username: joudojiza
         ftp-password: ${{ secrets.PASSWORD }}
         local-dir: ./dist/
-        entryPoint: ~www/
