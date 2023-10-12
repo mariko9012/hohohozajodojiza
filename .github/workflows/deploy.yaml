@@ -21,6 +21,6 @@ jobs:
         username: joudojiza
         password: ${{ secrets.PASSWORD }}
         protocol: ftps
-        port: 990
+        port: 22
         local-dir: dist/
         server-dir: www/
