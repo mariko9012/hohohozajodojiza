@@ -15,9 +15,11 @@ jobs:
     - run: npm run generate
 
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v3.1.2
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        ftp-server: ftp://joudojiza.sakura.ne.jp/~www/
-        ftp-username: joudojiza
-        ftp-password: ${{ secrets.PASSWORD }}
-        local-dir: ./dist/
+        server: joudojiza.sakura.ne.jp
+        username: joudojiza
+        password: ${{ secrets.PASSWORD }}
+        protocol: ftp
+        local-dir: dist/
+        server-dir: ~/
