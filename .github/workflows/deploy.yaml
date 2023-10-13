@@ -1,5 +1,5 @@
 on: push
-name: 🚀 Ddeploy to jodojiza.co
+name: 🚀 Ddeploy to jodojiza.com
 jobs:
   web-deploy:
     name: 🎉 Deploy
