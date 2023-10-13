@@ -20,6 +20,6 @@ jobs:
         server: joudojiza.sakura.ne.jp
         username: joudojiza
         password: ${{ secrets.PASSWORD }}
-        protocol: ftp
+        protocol: sftp
         local-dir: dist/
-        server-dir: ~/
+        server-dir: ~/www/
